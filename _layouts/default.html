@@ -32,9 +32,9 @@
         {% for node in navigation_pages %}
                 {% if node.nav_include %}
                     {% if page.url == node.url %}
-                      <a class="active" href="{{node.url | prepend: site.baseurl}}" class="active">{{node.title}}</a>
+                      &nbsp;|&nbsp;<a class="active" href="{{node.url | prepend: site.baseurl}}" class="active" style="color:#b4d5fe">{{node.title}}</a>
                     {% else %}
-                      <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
+                      &nbsp;|&nbsp;<a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
                     {% endif %}
             {% endif %}
     {% endfor %}
