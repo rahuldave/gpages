@@ -1,4 +1,5 @@
 import sys
+import os
 SUMMARYSTUFF = """
 ## Contents
 {:.no_toc}
@@ -6,9 +7,9 @@ SUMMARYSTUFF = """
 {: toc}
 """
 filetoread = sys.argv[1]
-fdtoread = open("notebooks/"+filetoread)
+fdtoread = open(filetoread)
 fileprefix = ".".join(filetoread.split('.')[:-1])
-filetowrite = fileprefix+".md"
+filetowrite = fileprefix+".newmd"
 buffer = ""
 for line in fdtoread:
     if line[0:2]=='# ':#assume title
@@ -22,3 +23,4 @@ fdtowrite=open(filetowrite, "w")
 summarystuff = SUMMARYSTUFF
 fdtowrite.write(preamble+summarystuff+buffer)
 fdtowrite.close()
+os.rename(filetowrite, filetoread)

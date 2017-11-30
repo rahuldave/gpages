@@ -280,7 +280,7 @@ dfsouth.head()
 
 
 
-## 6. Machine Learning, Prediction, and scikit-learn
+## Predicting via SVM
 
 
 
@@ -557,6 +557,8 @@ confusion_matrix(clf.predict(Xtest), ytest)
 
 
 
+## Allowing for crossovers
+
 
 
 ```python
@@ -623,7 +625,7 @@ plot_svm_new(clsvc, Xtr, ytr, Xte, yte)
 
 
 
-![png](olives-model_files/olives-model_15_1.png)
+![png](olives-model_files/olives-model_16_1.png)
 
 
 The best fit allows for a bigger margin by allowing some inbetween penalization. If we use the standard C=1 in scikit-learn you see that we are allowing for less penalization.
