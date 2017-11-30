@@ -1,3 +1,6 @@
+---
+title: The Case of the Italian Olives
+---
 
 This is the home page
 

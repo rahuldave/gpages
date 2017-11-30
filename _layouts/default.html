@@ -25,10 +25,10 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
       <nav class="group">
-      {% if site.title and site.title != page.title %}
-        <a href="{{ "/" | absolute_url }}">{{ site.title }}</a>
-      {% endif %}
-    {% assign navigation_pages = site.html_pages | sort: 'nav_include' %}
+        {% if site.title and site.title != page.title %}
+           <a href="{{ "/" | absolute_url }}">{{ site.title }}</a>
+        {% endif %}
+        {% assign navigation_pages = site.html_pages | sort: 'nav_include' %}
         {% for node in navigation_pages %}
                 {% if node.nav_include %}
                     {% if page.url == node.url %}
@@ -36,8 +36,8 @@
                     {% else %}
                       &nbsp;|&nbsp;<a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
                     {% endif %}
-            {% endif %}
-    {% endfor %}
+                {% endif %}
+        {% endfor %}
         </nav>
 
       <h1>{{page.title}}</h1>
