@@ -1,6 +1,6 @@
 # gpages
 
-## Script for the Lab: Preamble
+## Script for the Workshop: Preamble
 
 1. Set up a github account
 2. Create a Public repository called `testgpages` with a `README.md` and a **Jekyll** `.gitignore`.
